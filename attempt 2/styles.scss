@@ -1,10 +1,4 @@
-$bgColour: #98c379;
-$bgImage: url("");
-$lightGrey: #f1f0f0;
-$darkGrey: #2f323a;
-$peach: #e8b9a9;
-$green: #839d9a;
-
+@use "palette";
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap");
 
@@ -27,14 +21,14 @@ body {
 }
 
 .showcase {
-    background-color: $peach;
+    background-color: palette.$peach;
     color: white;
     height: 100vh;
     position: relative;
 
     &:before {
         content: "";
-        background: $bgImage no-repeat center center/cover;
+        background: palette.$bgImage no-repeat center center/cover;
         position: absolute;
         top: 0;
         right: 0;
