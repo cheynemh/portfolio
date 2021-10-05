@@ -1,72 +1,157 @@
+@use "palette";
+
 nav {
-    position: sticky;
+    // transform: rotate(-90deg);
+    position: fixed;
+    z-index: 1;
     top: 0;
     width: 100%;
-    height: 70px;
-    background: rgba(255, 255, 255, 0.8);
-    // background-color: rgba(0, 0, 0, 0.8);
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid palette.$borders;
+    background-color: palette.$navbar;
 
     & a {
-        font-size: 16px;
+        font-size: 12px;
+        color: palette.$logo;
     }
 
     & ul {
+        height: 45px;
         list-style: none;
         display: flex;
         justify-content: space-between;
-        // align-items: center;
+        align-items: center;
     }
 
-    & .nav-break {
-        width: 400px;
-        height: 70px;
+    & li {
+        border-left: 1px solid palette.$borders;
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+
+        a {
+            padding: 15px 30px;
+            text-decoration: underline;
+            transition: color 0.5s linear; /* vendorless fallback */
+            -o-transition: color 0.5s linear; /* opera */
+            -ms-transition: color 0.5s linear; /* IE 10 */
+            -moz-transition: color 0.5s linear; /* Firefox */
+            -webkit-transition: color 0.5s linear; /*safari and chrome */
+        }
+
+        &:last-child {
+            border-right: 1px solid palette.$borders;
+        }
+    }
+
+    & .nav-links {
+        display: flex;
+        justify-content: space-around;
         align-items: center;
         font-weight: 700;
-        margin-right: 50px;
 
         & a:hover {
             color: white;
             background-color: black;
         }
 
-        @media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 799px) {
             display: none;
         }
     }
 }
 
-.nav-burger {
-    margin: 20px;
-    width: 30px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @media only screen and (min-width: 799px) {
-        display: none;
-    }
-
-    & div {
-        width: 100%;
-        height: 3px;
-        background-color: black;
+.logo a {
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: palette.$logo;
+    &:hover {
+        color: palette.$borders;
+        transition: ease-in-out 0.2s;
     }
 }
-.logo {
-    margin: 10px 0 0 20px;
 
-    a {
-        margin-top: 120px;
-        font-size: 34px;
-        font-family: "Abril Fatface", cursive;
-        color: black;
+// mobile hamburger
+.nav-burger {
+    display: none;
+    margin: 20px 30px;
+    width: 30px;
+    height: 30px;
+
+    @media only screen and (max-width: 799px) {
+        display: block;
     }
-    &:hover {
-        color: rgba(200, 200, 200, 0.7);
-        transition: ease-in-out 0.3s;
+}
+
+.hamburger-line {
+    display: none;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+
+    @media only screen and (max-width: 799px) {
+        display: block;
+    }
+}
+
+// modal
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+
+    &-content {
+        background-color: palette.$lightGrey;
+        margin: auto;
+        border: 1px solid #888;
+        width: auto;
+        height: 100vh;
+        & ul {
+            // border: 1px solid red;
+            list-style: none;
+            width: 50vw;
+            margin: 10vh auto;
+            font-size: 4rem;
+            text-align: center;
+            line-height: 1.7em;
+        }
+        & a {
+            text-decoration: underline;
+        }
+        & a:hover {
+            color: palette.$linkHover;
+        }
+    }
+}
+.modal-contact {
+    width: 220px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 3rem;
+
+    & a {
+        color: palette.$link;
+        padding: 0 10px;
+    }
+}
+
+.modal .close {
+    color: #000;
+    float: right;
+    margin: -15px 30px 0 0;
+    font-size: 62px;
+    &:hover,
+    :focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
     }
 }

@@ -6,133 +6,229 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="styles.css" />
         <script
-            src="https://kit.fontawesome.com/a23eb66567.js"
-            crossorigin="anonymous"
-        ></script>
+        src="https://kit.fontawesome.com/a23eb66567.js"
+        crossorigin="anonymous"
+    ></script>
+    
         <title>portfolio</title>
     </head>
     <body>
         <nav>
             <ul>
                 <div class="logo">
-                    <li>
-                        <a href="#">cheyne.</a>
-                    </li>
+                    <a href="#">CHEYNE MURDOCH-HALL</a>
                 </div>
 
-                <div class="nav-break">
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">projects</a></li>
-                    <li><a href="#">skills</a></li>
-                    <li><a href="#">contact</a></li>
+                <div class="nav-links">
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#work">projects</a></li>
+                    <li><a href="#skills">skills</a></li>
+                    <li><a href="#contact">contact</a></li> 
                 </div>
 
-                <div class="nav-burger">
-                    <div></div>
+                <!-- hamburger menu -->
+                <div id="myBtn" class="nav-burger">
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
+                    <div class="hamburger-line"></div>
                 </div>
             </ul>
+
+        
+
+
         </nav>
-
-        <main>
-            <!-- <div class="title">
-                <img src="../images/black-a.png" />
-            </div> -->
-
-            <div class="about">
-                <h1>Hello! I'm Cheyne.</h1>
-                <p>
-                    Web Developer from
-                    <span class="subtitle--location">
-                        Melbourne, Australia.
-                    </span>
-                </p>
-            </div>
-
-            <div class="work">
-                <a href="#"><h2>Projects</h2></a>
-
-                <div class="projects">
+            <!-- modal -->
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
                     <ul>
-                        <li>
-                            <img src="https://www.placecage.com/g/300/300/" />
-                        </li>
-                        <li>
-                            <img src="https://www.placecage.com/g/300/300/" />
-                        </li>
-                        <li>
-                            <img src="https://www.placecage.com/g/300/300/" />
-                        </li>
-                        <li>
-                            <img src="https://www.placecage.com/g/300/300/" />
-                        </li>
-                        <li>
-                            <img src="https://www.placecage.com/g/300/300/" />
-                        </li>
-                        <li>
-                            <img src="https://www.placecage.com/g/300/300/" />
-                        </li>
-                        <li>
-                            <img src="https://www.placecage.com/g/300/300/" />
-                        </li>
-                        <li>
-                            <img src="https://www.placecage.com/g/300/300/" />
-                        </li>
-                        <li>
-                            <img src="https://www.placecage.com/g/300/300/" />
-                        </li>
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">about</a></li>
+                        <li><a href="#">projects</a></li>
+                        <li><a href="#">skills</a></li>
+                        <li><a href="#">contact</a></li>
                     </ul>
+
+                    <div class="modal-contact">
+                        <a href="mailto:cheynemh@gmail.com">
+                                    <i class="fas fa-envelope"></i>
+                                </a>
+                                <a href="https://github.com/cheynemh">
+                                    <i class="fa fa-github-square" aria-hidden="true"></i>
+                                </a>
+                                <a href="https://www.linkedin.com/in/cheyne-murdoch-hall-a63121b3/" >
+                                    <i class="fab fa-linkedin"></i>
+                                 </a>
+                    </div>
                 </div>
             </div>
+        <main>
 
-            <div class="skills">
+            <section id="about" class="first">
+                 <div id="browser">
+                     <div id="topbar">
+                         <ul>
+                             <li>&dot;</li>
+                             <li>&dot;</li>
+                             <li>&dot;</li>
+                             <span class="search">&plus;</span>
+                         </ul>
+                     </div>
+                    <div class="browser-content">
+                        <a href="#"><h1>Hi, I'm Cheyne.</h1></a>
+                        <div class="desc">
+                            <p>Junior Web Developer from
+                                <span class="location">Melbourne, Australia.</span>
+                            </div>
+                    </p>
+                    </div>
+
+                </div>
+                <div id="icon">
+                    <a href="#work">
+                        <i class="fas fa-arrow-circle-down"></i>
+                    </a>
+                </div>
+            </section>
+
+            
+
+            <section id="work" class="second">
+                <a href="#"><h2>Projects</h2></a>
+
+                    <!-- projects, feed top to bottom -->
+                    <div class="gallery">
+
+                        <!-- <a href="#" target="_blank" class="gallery__link" >
+                            <figure class="gallery__thumb">
+                                <img src=" " />
+                                <figcaption class="gallery__caption"> caption </figcaption>
+                            </figure>
+                        </a> -->
+
+                        <!-- column 1 -->
+                        <div class="gallery__column">
+                            <a href="#" target="_blank" class="gallery__link" >
+                                <figure class="gallery__thumb">
+                                    <img src="https://www.fillmurray.com/403/403" class="gallery__image"/>
+                                    <figcaption class="gallery__caption">caption</figcaption>
+                                </figure>
+                            </a>
+                            
+                            
+                        </div>
+                        
+                        <!-- column 2 -->
+                        <div class="gallery__column">
+                            <a href="#" target="_blank" class="gallery__link" >
+                                <figure class="gallery__thumb">
+                                    <img src="https://www.fillmurray.com/502/502" class="gallery__image"/>
+                                    <figcaption class="gallery__caption"> caption </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+                        
+                        <!-- column 3 -->
+                        <div class="gallery__column">
+                            <a href="#" target="_blank" class="gallery__link" >
+                                <figure class="gallery__thumb">
+                                    <img src="https://www.fillmurray.com/500/500" class="gallery__image"/>
+                                    <figcaption class="gallery__caption">
+                                        caption
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+            
+                        <!-- column 4 -->
+                        <div class="gallery__column">
+                            <a href="#" target="_blank" class="gallery__link" >
+                                <figure class="gallery__thumb">
+                                    <img src="https://www.fillmurray.com/600/600" class="gallery__image"/>
+                                    <figcaption class="gallery__caption">
+                                        caption
+                                    </figcaption>
+                                </figure>
+                            </a>
+                        </div>
+
+                        
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="third">
                 <h2>Skills</h2>
 
                 <div class="skillset">
                     <ul>
-                        <li><i class="fab fa-html5"></i></li>
-                        <li><i class="fab fa-css3-alt"></i></li>
-                        <li><i class="fab fa-sass"></i></li>
-                        <li><i class="fab fa-js"></i></li>
-                        <li><i class="fab fa-git-square"></i></li>
-                        <li><i class="fab fa-github-square"></i></li>
+                        <li><i class="fab fa-html5""></i></li>
+                        <li><i class="fab fa-sass""></i></li>
+                        <li><i class="fab fa-css3-alt""></i></li>
+                    </ul>
+                    <ul>
+                        <li><i class="fab fa-js-square""></i></li>
+                        <li><i class="fab fa-git-square""></i></li>
+                        <li><i class="fab fa-github-square""></i></li>
+
                     </ul>
                 </div>
-            </div>
+            </section>
 
-            <div class="contact">
+            <section id="contact" class="fourth">
                 <h2>Contact</h2>
                 <ul>
                     <li>
-                        <a href="mailto:cheynemh@gmail.com"
-                            ><i class="fas fa-envelope"></i
-                        ></a>
+                        <a href="mailto:cheynemh@gmail.com">
+                            <i class="fas fa-envelope"></i>
+                        </a>
                     </li>
                     <li>
-                        <a href="https://github.com/cheynemh"
-                            ><i class="fa fa-github" aria-hidden="true"></i
-                        ></a>
+                        <a href="https://github.com/cheynemh">
+                            <i class="fa fa-github-square" aria-hidden="true"></i>
+                        </a>
                     </li>
                     <li>
-                        <a
-                            href="https://www.linkedin.com/in/cheyne-murdoch-hall-a63121b3/"
-                            ><i class="fab fa-linkedin-in"></i
-                        ></a>
+                        <a href="https://www.linkedin.com/in/cheyne-murdoch-hall-a63121b3/" >
+                            <i class="fab fa-linkedin"></i>
+                         </a>
                     </li>
                 </ul>
-            </div>
+            </section>
+
         </main>
 
-        <div class="tarantino">
-            <div>
-                <a href="#"><img src="../images/logo-sm.png" alt="" /></a>
-            </div>
-
-            <div>
-                all copyright &copy;
+        <div id="foot">
+            <p>cmh &copy;
                 <script type="text/javascript">
                     document.write(new Date().getFullYear());
                 </script>
-            </div>
+            </p>
         </div>
     </body>
+
+    <script>
+        const modal = document.getElementById("myModal");
+        const btn = document.getElementById("myBtn");
+        const span = document.getElementsByClassName("close")[0];
+
+        // open the modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+            };
+
+        // on X click, close the modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        };
+
+        // on outside modal click, close the modal
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        };
+
+    </script>
 </html>
